@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ================= 配置区域 =================
-VNC_PASS="MySecretPassword"   # 你的密码
+VNC_PASS="Scsi520530"   # 你的密码
 RESOLUTION="1024x768x16"      # 分辨率
 # ===========================================
 
@@ -95,7 +95,7 @@ echo "🔗 Starting optimized x11vnc..."
 x11vnc -display :0 -forever -rfbauth $HOME/.vnc/passwd -listen localhost -xkb -rfbport 5900 -ncache 10 -nap &
 sleep 2
 
-CURRENT_PORT=${SERVER_PORT:-25830}
+CURRENT_PORT=${SERVER_PORT:-24624}
 echo "🌐 Starting noVNC on port $CURRENT_PORT..."
 websockify --web /usr/share/novnc $CURRENT_PORT localhost:5900 &
 
